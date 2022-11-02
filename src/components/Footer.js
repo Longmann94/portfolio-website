@@ -2,8 +2,10 @@
 const Footer = () => {
 
   return (
-    <div>
-      this is the footer
+    <div className="footer">
+      <div className="contact-details">
+        contact details:
+      </div>
     </div>
   );
 }

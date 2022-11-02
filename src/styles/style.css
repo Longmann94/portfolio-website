@@ -1,20 +1,92 @@
 body{
+  font-family: 'Roboto', sans-serif;
   background: 	#43484c;
   margin: auto;
+  padding: 1rem;
 }
 
 .main-container{
   display: grid;
-  grid: 1fr / 1fr;
-  gap: 5rem;
+  grid: 0.15fr 1fr 10px / 1fr;
+  gap: 4rem;
   justify-items: center;
 }
 
-.demo {
+.header{
+  display: grid;
+  grid: 1fr / 1fr 1fr;
+  align-items: center;
+  gap: 5rem;
+  padding: 1rem;
+  color: white;
+}
+
+.title{
+  font-size: 5rem;
+}
+
+/* Showcase*/
+.showcase{
+  display: grid;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+}
+
+.showcase-title{
+  position: absolute;
+  font-size: 2rem;
+  top: -10%;
+  left: 30%;
+}
+
+.feature-container1{
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 150px;
+ width: 150px;
+ background: white;
+ animation-duration: 4s;
+ animation-iteration-count: 3;
+}
+
+.feature-container2{
+ position: absolute;
+ top: 0;
+ right: 0;
+ height: 200px;
+ width: 200px;
+ background: white;
+}
+
+.feature-container3{
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ height: 200px;
+ width: 200px;
+ background: white;
+}
+
+.feature-container4{
+ position: absolute;
+ bottom: 0;
+ right: 0;
+ height: 200px;
+ width: 200px;
+ background: white;
+}
+
+.showcase-main-area {
   background-color: hsl(207, 9%, 19%);
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 65vh;
+  width: 60vw;
 }
 
 .perspective-container {
@@ -22,14 +94,13 @@ body{
 }
 
 .card {
-  background-image: url(https://picsum.photos/500/300);
   background-size: cover;
   box-shadow: 0 0 140px 10px rgba(0,0,0,.5);
   position: relative;
-  height: 300px;
-  width: 500px;
-  overflow: hidden; /* Try removing this to see how the sheen works! */
-  --sheenX: 0; /* Set these with JavaScript */
+  height: 65vh;
+  width: 85vw;
+  overflow: hidden;
+  --sheenX: 0;
   --sheenY: 0;
 }
 
