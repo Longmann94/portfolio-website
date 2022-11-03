@@ -46,7 +46,8 @@ function RouteSwitch() {
       feature2: 'Read/Write data to/from Firebase Firestore database',
       feature3: 'search feature, comment section and ability to like clips',
       feature4: 'logged in user can upload own clips',
-      url: 'https://longmann94.github.io/video-streaming/'
+      url: 'https://longmann94.github.io/video-streaming/',
+      imgUrl: '/images/ow-potg-website.png'
     }
   ]);
 

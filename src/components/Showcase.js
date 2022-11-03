@@ -39,7 +39,7 @@ const Showcase = ({ showCaseArr }) => {
             </div>
 
             <div className="perspective-container" onMouseMove={handleMouseMove}>
-              <div className="card" style={{backgroundImage: 'url(/images/ow-potg-website.png)'}}></div>
+              <div className="card" style={{backgroundImage: `url(${showcase.imgUrl})`}}></div>
               <div className="feature-container1 animate-me">
                 {showcase.feature1}
               </div>
