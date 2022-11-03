@@ -3,7 +3,7 @@ const Skills = () => {
 
   return(
   <div>
-    this is the skills page.
+    these are some of my skills.
   </div>
   )
 }

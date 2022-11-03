@@ -15,21 +15,44 @@ import { useState, useEffect } from 'react';
 import { Route, Routes, useNavigate, useLocation } from "react-router-dom";
 
 
-function App() {
+function RouteSwitch() {
+
+  const navigate = useNavigate();
+  const handleClick = (e) => {
+
+    let where = e.target.id;
+
+    if(where === 'showcase'){
+      navigate('/');
+    }
+
+    if(where === 'aboutme'){
+      navigate('/aboutme');
+    }
+
+    if(where === 'skills'){
+      navigate('/skills');
+    }
+
+    if(where === 'contacts'){
+      navigate('/contacts');
+    }
+  }
 
   const [showCaseArr, setShowCaseArr ] = useState([
     {
-      title: 'overwatch clips sharing website',
+      title: 'Overwatch clips sharing website',
       feature1: 'Log in/register using Firebase authentication',
       feature2: 'Read/Write data to/from Firebase Firestore database',
       feature3: 'search feature, comment section and ability to like clips',
-      feature4: 'logged in user can upload own clips'
+      feature4: 'logged in user can upload own clips',
+      url: 'https://longmann94.github.io/video-streaming/'
     }
   ]);
 
   return (
     <div className="main-container">
-      <Header />
+      <Header handleClick={handleClick} />
       <Routes>
         <Route path='/' element={<Showcase showCaseArr={showCaseArr} />} />
         <Route path='/aboutme' element={<AboutMe />} />
@@ -41,4 +64,4 @@ function App() {
   );
 }
 
-export default App;
+export default RouteSwitch;

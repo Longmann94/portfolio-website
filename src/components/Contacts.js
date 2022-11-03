@@ -3,7 +3,7 @@ const Contacts = () => {
 
   return(
   <div>
-    this is the contacts me page.
+    these are ways to get in touch with me.
   </div>
   )
 }

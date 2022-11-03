@@ -2,14 +2,14 @@ body{
   font-family: 'Roboto', sans-serif;
   background: 	#43484c;
   margin: auto;
-  padding: 1rem;
 }
 
 .main-container{
   display: grid;
-  grid: 0.15fr 1fr 10px / 1fr;
-  gap: 4rem;
+  grid: 0.15fr 1fr 0.1fr / 1fr;
   justify-items: center;
+  height: 100vh;
+  gap: 1.5rem;
 }
 
 .header{
@@ -17,12 +17,20 @@ body{
   grid: 1fr / 1fr 1fr;
   align-items: center;
   gap: 5rem;
-  padding: 1rem;
-  color: white;
+  color: black;
+  background: white;
+  width: 100%;
+  height: 100%;
+}
+
+.footer{
+  display: grid;
+  align-items: center;
 }
 
 .title{
   font-size: 5rem;
+  padding: 1.5rem;
 }
 
 /* Showcase*/
@@ -35,58 +43,65 @@ body{
   justify-items: center;
 }
 
-.showcase-title{
-  position: absolute;
-  font-size: 2rem;
-  top: -10%;
-  left: 30%;
+.showcase-top-area{
+  display: grid;
+  grid: 1fr 1fr / 1fr;
+  justify-items: center
+}
+
+.showcase-top-area a{
+  font-size: 2.5rem;
 }
 
 .feature-container1{
  position: absolute;
  top: 0;
  left: 0;
- height: 150px;
- width: 150px;
- background: white;
- animation-duration: 4s;
- animation-iteration-count: 3;
+ background: rgba(255, 255, 255, 0.65);
+ border-radius: 10px;
+ padding: 1rem;
 }
 
 .feature-container2{
  position: absolute;
  top: 0;
  right: 0;
- height: 200px;
- width: 200px;
- background: white;
+ padding: 1rem;
+ background: rgba(255, 255, 255, 0.65);
+ border-radius: 10px;
 }
 
 .feature-container3{
  position: absolute;
  bottom: 0;
  left: 0;
- height: 200px;
- width: 200px;
- background: white;
+ padding: 1rem;
+ background: rgba(255, 255, 255, 0.65);
+ border-radius: 10px;
 }
 
 .feature-container4{
  position: absolute;
  bottom: 0;
  right: 0;
- height: 200px;
- width: 200px;
- background: white;
+ padding: 1rem;
+ background: rgba(255, 255, 255, 0.65);
+ border-radius: 10px;
 }
 
 .showcase-main-area {
-  background-color: hsl(207, 9%, 19%);
-  display: flex;
+  display: grid;
+  grid: 0.15fr 1fr / 1fr;
   align-items: center;
   justify-content: center;
   height: 65vh;
   width: 60vw;
+}
+
+.showcase-title{
+  font-size: 3rem;
+  text-align: center;
+  color: #fff;
 }
 
 .perspective-container {

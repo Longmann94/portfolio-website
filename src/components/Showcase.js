@@ -1,6 +1,7 @@
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import IconButton from '@mui/material/IconButton';
+import Link from '@mui/material/Link';
 
 const Showcase = ({ showCaseArr }) => {
 
@@ -24,32 +25,19 @@ const Showcase = ({ showCaseArr }) => {
     console.log('i got clicked');
   }
 
-  <div className="showcase-main-area">
-    <div className="showcase-title">Showcase Title!</div>
-    <div className="perspective-container" onMouseMove={handleMouseMove}>
-      <div className="card" style={{backgroundImage: 'url(/images/ow-potg-website.png)'}}></div>
-      <div className="feature-container1 animate-me">
-        this will contain information about the first feature.
-      </div>
-      <div className="feature-container2">
-        this will contain information about the 2nd feature.
-      </div>
-      <div className="feature-container3">
-        this will contain information about the 3rd feature.
-      </div>
-      <div className="feature-container4">
-        this will contain information about the 4th feature.
-      </div>
-    </div>
-  </div>
-
   return(
     <div className="showcase">
       {
         showCaseArr.map((showcase) => {
 
           return <div className="showcase-main-area" key={showcase.title}>
-            <div className="showcase-title">{showcase.title}</div>
+            <div className="showcase-top-area">
+              <div className="showcase-title">{showcase.title}</div>
+              <Link href={showcase.url} target="_blank" rel="noopener noreferrer" underline="hover">
+                Go to website
+              </Link>
+            </div>
+
             <div className="perspective-container" onMouseMove={handleMouseMove}>
               <div className="card" style={{backgroundImage: 'url(/images/ow-potg-website.png)'}}></div>
               <div className="feature-container1 animate-me">

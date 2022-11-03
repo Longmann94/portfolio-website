@@ -3,9 +3,7 @@ const Footer = () => {
 
   return (
     <div className="footer">
-      <div className="contact-details">
-        contact details:
-      </div>
+      <div>this is the footer</div>
     </div>
   );
 }
