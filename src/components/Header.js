@@ -5,8 +5,8 @@ const Header = ({ handleClick }) => {
 
   return (
     <div className="header">
-      <div className="title">Long Mann</div>
-      <ButtonGroup size='large' variant="text" aria-label="text button group">
+      <div className="title">Long Mann <b>Aspiring Front-end Developer</b></div>
+      <ButtonGroup size='large' variant="text" aria-label="text button group" sx={{paddingLeft: '10rem'}}>
         <Button onClick={handleClick} id='showcase' sx={{fontSize: '1.5rem', fontWeight: 'bold'}}>Showcase</Button>
         <Button onClick={handleClick} id='aboutme' sx={{fontSize: '1.25rem'}}>About me</Button>
         <Button onClick={handleClick} id='skills' sx={{fontSize: '1.25rem'}}>Skills</Button>

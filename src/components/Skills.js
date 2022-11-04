@@ -15,7 +15,7 @@ const Skills = () => {
 
   return(
   <Paper sx={{margin: '2.5rem'}}>
-  <div className="skills-container">
+  <div className="content-container">
   <div className="content-title">My Skills:</div>
   <div>
   <List>
