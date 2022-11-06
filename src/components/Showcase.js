@@ -3,13 +3,42 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import IconButton from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
 
-const Showcase = ({ showCaseArr }) => {
+import { useState, useEffect } from 'react';
+
+import { motion, AnimatePresence } from "framer-motion";
+import { wrap } from "popmotion";
+
+const Showcase = () => {
+
+
+  const [showCaseArr, setShowCaseArr ] = useState([
+    {
+      title: 'Overwatch POTG clips sharing',
+      feature1: 'Log in/register using Firebase authentication',
+      feature2: 'Read/Write data to/from Firebase Firestore database',
+      feature3: 'Search feature, comment section and ability to like clips',
+      feature4: 'Logged in user can upload own clips',
+      url: 'https://longmann94.github.io/video-streaming/',
+      imgUrl: '/images/ow-potg-website.png'
+    },
+    {
+      title: 'Hidden Objects mini game',
+      feature1: 'User click on image to find object',
+      feature2: 'Objects discovered will disappear',
+      feature3: 'Timer to record time until all objects are found',
+      feature4: `A scoreboard that records the last ten player's time`,
+      url: 'https://longmann94.github.io/hidden-object-game/',
+      imgUrl: '/images/hiddenObjectgame.png'
+    }
+  ]);
+
+  const [[showcase, direction], setShowcase] = useState([0, 0]);
 
   function setSheenPosition(xRatio, yRatio, e) {
     const xOffset = 1 - (xRatio - 0.5) * 800;
     const yOffset = 1 - (yRatio - 0.5) * 800;
-    e.target.style.setProperty('--sheenX', `${xOffset}px`)
-    e.target.style.setProperty('--sheenY', `${yOffset}px`)
+    e.target.style.setProperty('--sheenX', `${xOffset}px`);
+    e.target.style.setProperty('--sheenY', `${yOffset}px`);
 }
 
   const handleMouseMove = (e) => {
@@ -21,43 +50,79 @@ const Showcase = ({ showCaseArr }) => {
     setSheenPosition(e.pageX / width, e.pageY / width, e);
   }
 
-  const handleClick = () => {
-    console.log('i got clicked');
+  const variants = {
+  enter: (direction: number) => {
+    return {
+      x: direction > 0 ? 1000 : -1000,
+      opacity: 0
+    };
+  },
+  center: {
+    zIndex: 1,
+    x: 0,
+    y: 0,
+    opacity: 1
+  },
+  exit: (direction: number) => {
+    return {
+      zIndex: 0,
+      x: direction < 0 ? 1000 : -1000,
+      opacity: 0
+    };
   }
+};
+
+const showcaseIndex = wrap(0, showCaseArr.length, showcase);
+
+const cycleShowcase = (newDirection: number) => {
+    setShowcase([showcase + newDirection, newDirection]);
+  };
 
   return(
     <div className="showcase">
-      {
-        showCaseArr.map((showcase) => {
+      <AnimatePresence initial={false} custome={direction}>
+        <motion.div
+          key={showcase}
+          custom={direction}
+          variants={variants}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          transition={{
+            x: { type: "spring", stiffness: 400, damping: 25 },
+            opacity: { duration: 0.2 }
+          }}
+        className="showcase-main-area">
+          <div className="showcase-top-area">
+            <div className="showcase-title"><b>{showCaseArr[showcaseIndex].title}</b></div>
+            <Link href={showCaseArr[showcaseIndex].url} target="_blank" rel="noopener noreferrer" underline="hover">
+              Go to website
+            </Link>
+          </div>
 
-          return <div className="showcase-main-area" key={showcase.title}>
-            <div className="showcase-top-area">
-              <div className="showcase-title">{showcase.title}</div>
-              <Link href={showcase.url} target="_blank" rel="noopener noreferrer" underline="hover">
-                Go to website
-              </Link>
+          <div className="perspective-container" onMouseMove={handleMouseMove}>
+            <div className="card" style={{backgroundImage: `url(${showCaseArr[showcaseIndex].imgUrl})`}}></div>
+            <div className="feature-container1 animate-me">
+              {showCaseArr[showcaseIndex].feature1}
             </div>
-
-            <div className="perspective-container" onMouseMove={handleMouseMove}>
-              <div className="card" style={{backgroundImage: `url(${showcase.imgUrl})`}}></div>
-              <div className="feature-container1 animate-me">
-                {showcase.feature1}
-              </div>
-              <div className="feature-container2">
-                {showcase.feature2}
-              </div>
-              <div className="feature-container3">
-                {showcase.feature3}
-              </div>
-              <div className="feature-container4">
-                {showcase.feature4}
-              </div>
+            <div className="feature-container2">
+              {showCaseArr[showcaseIndex].feature2}
+            </div>
+            <div className="feature-container3">
+              {showCaseArr[showcaseIndex].feature3}
+            </div>
+            <div className="feature-container4">
+              {showCaseArr[showcaseIndex].feature4}
             </div>
           </div>
-        })
-      }
-      <IconButton sx={{ position: 'absolute', top: '50%', right: '0' }} onClick={handleClick}><ArrowForwardIosIcon fontSize='large' color='primary' /></IconButton>
-      <IconButton sx={{ position: 'absolute', top: '50%', left: '0' }} onClick={handleClick}><ArrowBackIosIcon fontSize='large' color='primary' /></IconButton>
+        </motion.div>
+      </AnimatePresence>
+      <IconButton sx={{ position: 'absolute', top: '50%', right: '0' }} onClick={() => cycleShowcase(1)}>
+        <ArrowForwardIosIcon fontSize='large' color='primary' />
+      </IconButton>
+      <IconButton sx={{ position: 'absolute', top: '50%', left: '0' }} onClick={() => cycleShowcase(-1)}>
+        <ArrowBackIosIcon fontSize='large' color='primary' />
+      </IconButton>
     </div>
   )
 }

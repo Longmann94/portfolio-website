@@ -1,7 +1,8 @@
 body{
   font-family: 'Roboto', sans-serif;
-  background: 	#66c2ff;
+  background:   #E5E5E5;
   margin: auto;
+  overflow: hidden;
 }
 
 .main-container{
@@ -24,6 +25,10 @@ body{
   box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, .5);
 }
 
+.header-btn-group{
+  justify-self: center;
+}
+
 .footer{
   display: grid;
   align-items: center;
@@ -40,7 +45,7 @@ body{
 .title{
   font-size: 4.5rem;
   padding: 5rem;
-  box-shadow: inset 0 0 0 0 #54b3d6;
+  box-shadow: inset 0 0 0 0 white;
   color: black;
   margin: 0 -.25rem;
   padding: 1rem;
@@ -54,7 +59,7 @@ body{
 }
 
 .title:hover{
-  box-shadow: inset 100vw 0 0 0 	hsl(240, 0%, 20%);
+  box-shadow: inset 100vw 0 0 0 	rgba(0, 0, 0, 1);
   color: white;
 }
 
@@ -87,6 +92,16 @@ body{
   align-items: center;
   justify-items: center;
   font-size: 1.25rem;
+}
+
+.showcase-main-area {
+  position: absolute;
+  display: grid;
+  grid: 0.15fr 1fr / 1fr;
+  align-items: center;
+  justify-content: center;
+  height: 65vh;
+  width: 60vw;
 }
 
 .showcase-top-area{
@@ -133,15 +148,6 @@ body{
  padding: 1rem;
  background: rgba(255, 255, 255, 0.65);
  border-radius: 10px;
-}
-
-.showcase-main-area {
-  display: grid;
-  grid: 0.15fr 1fr / 1fr;
-  align-items: center;
-  justify-content: center;
-  height: 65vh;
-  width: 60vw;
 }
 
 .showcase-title{

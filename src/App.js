@@ -39,23 +39,11 @@ function RouteSwitch() {
     }
   }
 
-  const [showCaseArr, setShowCaseArr ] = useState([
-    {
-      title: 'Overwatch clips sharing website',
-      feature1: 'Log in/register using Firebase authentication',
-      feature2: 'Read/Write data to/from Firebase Firestore database',
-      feature3: 'Search feature, comment section and ability to like clips',
-      feature4: 'Logged in user can upload own clips',
-      url: 'https://longmann94.github.io/video-streaming/',
-      imgUrl: '/images/ow-potg-website.png'
-    }
-  ]);
-
   return (
     <div className="main-container">
       <Header handleClick={handleClick} />
       <Routes>
-        <Route path='/' element={<Showcase showCaseArr={showCaseArr} />} />
+        <Route path='/' element={<Showcase />} />
         <Route path='/aboutme' element={<AboutMe />} />
         <Route path='/skills' element={<Skills />} />
         <Route path='/contacts' element={<Contacts />} />
