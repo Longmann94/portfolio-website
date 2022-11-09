@@ -29,6 +29,15 @@ const Showcase = () => {
       feature4: `A scoreboard that records the last ten player's time`,
       url: 'https://longmann94.github.io/hidden-object-game/',
       imgUrl: '/images/hiddenObjectgame.png'
+    },
+    {
+      title: 'An online store',
+      feature1: 'User can add items to cart',
+      feature2: 'Search feature for items',
+      feature3: 'Cart page allow user to adjust quantity and update total costs',
+      feature4: `Each item has its own preview page`,
+      url: 'https://longmann94.github.io/shopping-cart/',
+      imgUrl: '/images/onlineStore.png'
     }
   ]);
 
@@ -80,7 +89,7 @@ const cycleShowcase = (newDirection: number) => {
 
   return(
     <div className="showcase">
-      <AnimatePresence initial={false} custome={direction}>
+      <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={showcase}
           custom={direction}
@@ -89,7 +98,7 @@ const cycleShowcase = (newDirection: number) => {
           animate="center"
           exit="exit"
           transition={{
-            x: { type: "spring", stiffness: 400, damping: 25 },
+            x: { type: "spring", stiffness: 300, damping: 20 },
             opacity: { duration: 0.2 }
           }}
         className="showcase-main-area">

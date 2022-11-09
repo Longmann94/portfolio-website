@@ -10,14 +10,12 @@ body{
   grid: 0.15fr 1fr 0.1fr / 1fr;
   justify-items: center;
   height: 100vh;
-  gap: 1.5rem;
 }
 
 .header{
   display: grid;
   grid: 1fr / 1fr 1fr;
   align-items: center;
-  gap: 4rem;
   color: black;
   background: white;
   width: 100%;
@@ -56,11 +54,13 @@ body{
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  border-bottom-right-radius: 80px 80px;
 }
 
 .title:hover{
   box-shadow: inset 100vw 0 0 0 	rgba(0, 0, 0, 1);
   color: white;
+  border-bottom-right-radius: 80px 80px;
 }
 
 .title b{
@@ -75,12 +75,12 @@ body{
 .content-container{
   font-size: 1.25rem;
   display: grid;
-  grid: 0.1fr 1fr / 1fr;
+  grid: 50px 1fr / 1fr;
   justify-items: center;
-  padding: 5rem;
+  padding: 2.5rem;
   border-radius: 10px;
   width: 50vw;
-  margin: 2.5rem;
+  margin: 1.5rem;
 }
 
 /* Showcase*/
@@ -181,4 +181,9 @@ body{
   left: -400px;
   background: linear-gradient(217deg, rgba(255,255,255,0), rgba(255,255,255,0) 35%, rgba(255,255,255,0.25) 45%, rgba(255,255,255,.25) 50%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
   transform: translateX(var(--sheenX)) translateY(var(--sheenY));
+}
+
+.aboutme-content{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }

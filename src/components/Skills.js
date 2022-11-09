@@ -23,7 +23,7 @@ const Skills = () => {
   <ListItemIcon>
   <TerminalIcon />
   </ListItemIcon>
-  <ListItemText primary='Programming Languages:' primaryTypographyProps={{fontSize: '1.25rem'}} />
+  <ListItemText primary='Programming Languages for now, always learning new things everyday :)' primaryTypographyProps={{fontSize: '1.25rem'}} />
   </ListItem>
   <ListItem><ListItemText secondary='-  HTML' sx={styleListItems} secondaryTypographyProps={{fontSize: '1rem'}}/></ListItem>
   <ListItem><ListItemText secondary='-  CSS' sx={styleListItems} secondaryTypographyProps={{fontSize: '1rem'}}/></ListItem>
@@ -38,7 +38,7 @@ const Skills = () => {
   <ListItemIcon>
   <MenuBookIcon />
   </ListItemIcon>
-  <ListItemText primary='Others:' primaryTypographyProps={{fontSize: '1.25rem'}}/>
+  <ListItemText primary='Others bits and pieces I picked up along the way:' primaryTypographyProps={{fontSize: '1.25rem'}}/>
   </ListItem>
   <ListItem><ListItemText secondary='-  Passion for all things IT, building own PC and troubleshooting problems encountered' sx={styleListItems} secondaryTypographyProps={{fontSize: '1rem'}}/></ListItem>
   <ListItem><ListItemText secondary='-  Familiar with Unix-like operating system such as Linux' sx={styleListItems} secondaryTypographyProps={{fontSize: '1rem'}}/></ListItem>
@@ -56,7 +56,7 @@ const Skills = () => {
   <ListItemIcon>
   <GoogleIcon />
   </ListItemIcon>
-  <ListItemText primary='Proficient at using GOOGLE to solve any problem I encounter.' primaryTypographyProps={{fontSize: '1.25rem'}}/>
+  <ListItemText primary='Most Importantly! I consider myself to be proficient at using GOOGLE to solve any problem I may encounter.' primaryTypographyProps={{fontSize: '1.25rem'}}/>
   </ListItem>
   </List>
   </div>
