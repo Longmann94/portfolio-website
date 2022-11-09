@@ -83,7 +83,6 @@ body{
   margin: 1.5rem;
 }
 
-/* Showcase*/
 .showcase{
   display: grid;
   position: relative;
@@ -172,7 +171,7 @@ body{
   --sheenY: 0;
 }
 
-.card :: after {
+.card::after {
   content: "";
   position: absolute;
   top: -400px;
