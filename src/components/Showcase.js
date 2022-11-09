@@ -19,6 +19,7 @@ const Showcase = () => {
       feature3: 'Search feature, comment section and ability to like clips',
       feature4: 'Logged in user can upload own clips',
       url: 'https://longmann94.github.io/video-streaming/',
+      repoUrl: 'https://github.com/Longmann94/video-streaming',
       imgUrl: '/images/ow-potg-website.png'
     },
     {
@@ -28,6 +29,7 @@ const Showcase = () => {
       feature3: 'Timer to record time until all objects are found',
       feature4: `A scoreboard that records the last ten player's time using Firebase Firestore`,
       url: 'https://longmann94.github.io/hidden-object-game/',
+      repoUrl: 'https://github.com/Longmann94/hidden-object-game',
       imgUrl: '/images/hiddenObjectgame.png'
     },
     {
@@ -37,6 +39,7 @@ const Showcase = () => {
       feature3: 'Cart page allow user to adjust quantity and update total costs',
       feature4: `Each item has its own preview page`,
       url: 'https://longmann94.github.io/shopping-cart/',
+      repoUrl: 'https://github.com/Longmann94/shopping-cart',
       imgUrl: '/images/onlineStore.png'
     }
   ]);
@@ -104,9 +107,14 @@ const cycleShowcase = (newDirection: number) => {
         className="showcase-main-area">
           <div className="showcase-top-area">
             <div className="showcase-title"><b>{showCaseArr[showcaseIndex].title}</b></div>
+            <div className="showcase-title-links">
             <Link href={showCaseArr[showcaseIndex].url} target="_blank" rel="noopener noreferrer" underline="hover">
               Go to website
             </Link>
+            <Link href={showCaseArr[showcaseIndex].repoUrl} target="_blank" rel="noopener noreferrer" underline="hover">
+              Go to Repo
+            </Link>
+            </div>
           </div>
 
           <div className="perspective-container" onMouseMove={handleMouseMove}>
