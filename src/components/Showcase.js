@@ -26,7 +26,7 @@ const Showcase = () => {
       feature1: 'User click on image to find object',
       feature2: 'Objects discovered will disappear',
       feature3: 'Timer to record time until all objects are found',
-      feature4: `A scoreboard that records the last ten player's time`,
+      feature4: `A scoreboard that records the last ten player's time using Firebase Firestore`,
       url: 'https://longmann94.github.io/hidden-object-game/',
       imgUrl: '/images/hiddenObjectgame.png'
     },
