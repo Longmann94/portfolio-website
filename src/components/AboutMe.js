@@ -7,7 +7,7 @@ const AboutMe = () => {
     <div>
     <div className="content-title">About me!</div>
     <div className="aboutme-content">
-    <p>Hello, I'm Long. I'm an aspiring developer hoping to contribute to something great starting from the front-end and working my way to
+    <p>Hello, I'm Long. I am an aspiring developer hoping to contribute to something great starting from the front-end and working my way to
     becoming a full-stack developer who is always working on something new and cool every day!</p>
     <p>This is my portfolio page that I've created to showcase some of the cool projects that I've worked on.
     Hopefully you will have a look around and be interested enough to contact me for more information.</p>
