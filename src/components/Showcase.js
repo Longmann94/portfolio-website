@@ -20,7 +20,7 @@ const Showcase = () => {
       feature4: 'Logged in user can upload own clips',
       url: 'https://longmann94.github.io/video-streaming/',
       repoUrl: 'https://github.com/Longmann94/video-streaming',
-      imgUrl: '/images/ow-potg-website.png'
+      imgUrl: './images/ow-potg-website.png'
     },
     {
       title: 'Hidden Objects mini game',
@@ -30,7 +30,7 @@ const Showcase = () => {
       feature4: `A scoreboard that records the last ten player's time using Firebase Firestore`,
       url: 'https://longmann94.github.io/hidden-object-game/',
       repoUrl: 'https://github.com/Longmann94/hidden-object-game',
-      imgUrl: '/images/hiddenObjectgame.png'
+      imgUrl: './images/hiddenObjectgame.png'
     },
     {
       title: 'An online store',
@@ -40,7 +40,7 @@ const Showcase = () => {
       feature4: `Each item has its own preview page`,
       url: 'https://longmann94.github.io/shopping-cart/',
       repoUrl: 'https://github.com/Longmann94/shopping-cart',
-      imgUrl: '/images/onlineStore.png'
+      imgUrl: './images/onlineStore.png'
     }
   ]);
 
