@@ -1,7 +1,7 @@
 {
   "name": "portfolio-showcase",
   "version": "0.1.0",
-  "Homepage": "https://longmann94.github.io/portfolio-showcase",
+  "Homepage": "https://longmann94.github.io/portfolio-website",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
