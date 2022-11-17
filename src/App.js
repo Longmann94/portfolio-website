@@ -14,8 +14,12 @@ import { useState, useEffect } from 'react';
 //import from react-router-dom
 import { Route, Routes, useNavigate, useLocation } from "react-router-dom";
 
+import { AnimatePresence } from 'framer-motion';
+
 
 function RouteSwitch() {
+  let location = useLocation();
+  console.log(location);
 
   const navigate = useNavigate();
   const handleClick = (e) => {
@@ -42,12 +46,14 @@ function RouteSwitch() {
   return (
     <div className="main-container">
       <Header handleClick={handleClick} />
-      <Routes>
+      <AnimatePresence>
+      <Routes key={location.pathname}>
         <Route path='/' element={<Showcase />} />
         <Route path='/aboutme' element={<AboutMe />} />
         <Route path='/skills' element={<Skills />} />
         <Route path='/contacts' element={<Contacts />} />
       </Routes>
+      </AnimatePresence>
       <Footer />
     </div>
   );

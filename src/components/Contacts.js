@@ -1,4 +1,4 @@
-import Paper from '@mui/material/Paper';
+
 import Link from '@mui/material/Link';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -8,10 +8,22 @@ import Divider from '@mui/material/Divider';
 
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 
+import { motion as m } from 'framer-motion';
+
 const Contacts = () => {
 
   return(
-    <Paper className="content-container">
+    <m.div className="content-container"
+      initial={{
+        opacity: 0.25,
+        y: '100%'
+      }}
+      animate={{
+        opacity: 1,
+        y: '0%'
+      }}
+      transition={{duration: 0.5, ease: 'easeOut'}}
+    >
     <div className="content-title">My Contacts:</div>
     <div>
     <List>
@@ -28,7 +40,7 @@ const Contacts = () => {
     <p><b>Github Repositories:</b> <Link href='https://github.com/Longmann94?tab=repositories' target="_blank" rel="noopener noreferrer" underline="hover">https://github.com/Longmann94?tab=repositories</Link></p>
     <p><b>LinkedIn:</b> <Link href='www.linkedin.com/in/long-mann-84076b150' target="_blank" rel="noopener noreferrer" underline="hover">www.linkedin.com/in/long-mann-84076b150</Link></p>
   </div>
-  </Paper>
+  </m.div>
   )
 }
 

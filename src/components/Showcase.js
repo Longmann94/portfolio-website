@@ -91,7 +91,17 @@ const cycleShowcase = (newDirection: number) => {
   };
 
   return(
-    <div className="showcase">
+    <motion.div className="showcase"
+      initial={{
+        opacity: 0.25,
+        y: '100%'
+      }}
+      animate={{
+        opacity: 1,
+        y: '0%'
+      }}
+      transition={{duration: 0.5, ease: 'easeOut'}}
+    >
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={showcase}
@@ -108,12 +118,12 @@ const cycleShowcase = (newDirection: number) => {
           <div className="showcase-top-area">
             <div className="showcase-title"><b>{showCaseArr[showcaseIndex].title}</b></div>
             <div className="showcase-title-links">
-            <Link href={showCaseArr[showcaseIndex].url} target="_blank" rel="noopener noreferrer" underline="hover">
-              Go to website
-            </Link>
-            <Link href={showCaseArr[showcaseIndex].repoUrl} target="_blank" rel="noopener noreferrer" underline="hover">
-              Go to Repo
-            </Link>
+              <Link href={showCaseArr[showcaseIndex].url} target="_blank" rel="noopener noreferrer" underline="hover">
+                Go to website
+              </Link>
+              <Link href={showCaseArr[showcaseIndex].repoUrl} target="_blank" rel="noopener noreferrer" underline="hover">
+                Go to Repo
+              </Link>
             </div>
           </div>
 
@@ -140,7 +150,7 @@ const cycleShowcase = (newDirection: number) => {
       <IconButton sx={{ position: 'absolute', top: '50%', left: '0' }} onClick={() => cycleShowcase(-1)}>
         <ArrowBackIosIcon fontSize='large' color='primary' />
       </IconButton>
-    </div>
+    </motion.div>
   )
 }
 
