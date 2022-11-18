@@ -16,7 +16,17 @@ const AboutMe = () => {
       }}
       transition={{duration: 0.5, ease: 'easeOut'}}
     >
-      <div>
+      <m.div
+        initial={{
+          opacity: 0.25,
+          y: '-100%'
+        }}
+        animate={{
+          opacity: 1,
+          y: '0%'
+        }}
+        transition={{duration: 1.25, ease: 'easeOut'}}
+      >
         <div className="content-title">About me!</div>
         <div className="aboutme-content">
           <p>Hello, I'm Long. I am an aspiring developer hoping to contribute to something great starting from the front-end and working my way to
@@ -31,7 +41,7 @@ const AboutMe = () => {
           I hope you have a nice day and I look forward to hearing from you soon.</p>
 
         </div>
-      </div>
+      </m.div>
     </m.div>
 
 );

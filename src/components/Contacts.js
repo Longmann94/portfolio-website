@@ -24,23 +24,35 @@ const Contacts = () => {
       }}
       transition={{duration: 0.5, ease: 'easeOut'}}
     >
-    <div className="content-title">My Contacts:</div>
-    <div>
-    <List>
-    <ListItem>
-    <ListItemIcon>
-    <ContactPageIcon />
-    </ListItemIcon>
-    <ListItemText primary='Here are some ways you can reach me:' primaryTypographyProps={{fontSize: '1.75rem', marginLeft: '-1rem'}} />
-    </ListItem>
-    <ListItem><ListItemText secondary='Email: longmnn@gmail.com' secondaryTypographyProps={{fontSize: '1.25rem'}} sx={{paddingLeft: '2.5rem'}}/></ListItem>
-    <ListItem><ListItemText secondary='Phone: 04 1200 8018' secondaryTypographyProps={{fontSize: '1.25rem'}} sx={{paddingLeft: '2.5rem'}}/></ListItem>
-    </List>
-    <Divider />
-    <p><b>Github Repositories:</b> <Link href='https://github.com/Longmann94?tab=repositories' target="_blank" rel="noopener noreferrer" underline="hover">https://github.com/Longmann94?tab=repositories</Link></p>
-    <p><b>LinkedIn:</b> <Link href='www.linkedin.com/in/long-mann-84076b150' target="_blank" rel="noopener noreferrer" underline="hover">www.linkedin.com/in/long-mann-84076b150</Link></p>
-  </div>
-  </m.div>
+      <m.div
+        initial={{
+          opacity: 0.25,
+          y: '-100%'
+        }}
+        animate={{
+          opacity: 1,
+          y: '0%'
+        }}
+        transition={{duration: 1.25, ease: 'easeOut'}}
+      >
+        <div className="content-title">My Contacts:</div>
+        <div>
+          <List>
+            <ListItem>
+              <ListItemIcon>
+                <ContactPageIcon />
+              </ListItemIcon>
+              <ListItemText primary='Here are some ways you can reach me:' primaryTypographyProps={{fontSize: '1.75rem', marginLeft: '-1rem'}} />
+            </ListItem>
+            <ListItem><ListItemText secondary='Email: longmnn@gmail.com' secondaryTypographyProps={{fontSize: '1.25rem'}} sx={{paddingLeft: '2.5rem'}}/></ListItem>
+            <ListItem><ListItemText secondary='Phone: 04 1200 8018' secondaryTypographyProps={{fontSize: '1.25rem'}} sx={{paddingLeft: '2.5rem'}}/></ListItem>
+          </List>
+          <Divider />
+          <p><b>Github Repositories:</b> <Link href='https://github.com/Longmann94?tab=repositories' target="_blank" rel="noopener noreferrer" underline="hover">https://github.com/Longmann94?tab=repositories</Link></p>
+          <p><b>LinkedIn:</b> <Link href='www.linkedin.com/in/long-mann-84076b150' target="_blank" rel="noopener noreferrer" underline="hover">www.linkedin.com/in/long-mann-84076b150</Link></p>
+        </div>
+      </m.div>
+      </m.div>
   )
 }
 
