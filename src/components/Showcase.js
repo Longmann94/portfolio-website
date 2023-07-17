@@ -11,37 +11,49 @@ import { wrap } from "popmotion";
 const Showcase = () => {
 
 
-  const [showCaseArr, setShowCaseArr ] = useState([
+  const [showCaseArr, setShowCaseArr] = useState([
     {
-      title: 'Overwatch POTG clips sharing',
-      feature1: 'Log in/register using Firebase authentication',
-      feature2: 'Read/Write data to/from Firebase Firestore database',
-      feature3: 'Search feature, comment section and ability to like clips',
-      feature4: 'Logged in user can upload own clips',
-      url: 'https://longmann94.github.io/video-streaming/',
-      repoUrl: 'https://github.com/Longmann94/video-streaming',
-      imgUrl: './images/ow-potg-website.png'
+      title: "Overwatch POTG clips sharing",
+      feature1: "Log in/register using Firebase authentication",
+      feature2: "Read/Write data to/from Firebase Firestore database",
+      feature3: "Search feature, comment section and ability to like clips",
+      feature4: "Logged in user can upload own clips",
+      url: "https://longmann94.github.io/video-streaming/",
+      repoUrl: "https://github.com/Longmann94/video-streaming",
+      imgUrl: "./images/ow-potg-website.png",
     },
     {
-      title: 'Hidden Objects mini game',
-      feature1: 'User click on image to find object',
-      feature2: 'Objects discovered will disappear',
-      feature3: 'Timer to record time until all objects are found',
+      title: "Hidden Objects mini game",
+      feature1: "User click on image to find object",
+      feature2: "Objects discovered will disappear",
+      feature3: "Timer to record time until all objects are found",
       feature4: `A scoreboard that records the last ten player's time using Firebase Firestore`,
-      url: 'https://longmann94.github.io/hidden-object-game/',
-      repoUrl: 'https://github.com/Longmann94/hidden-object-game',
-      imgUrl: './images/hiddenObjectgame.png'
+      url: "https://longmann94.github.io/hidden-object-game/",
+      repoUrl: "https://github.com/Longmann94/hidden-object-game",
+      imgUrl: "./images/hiddenObjectgame.png",
     },
     {
-      title: 'An online store',
-      feature1: 'User can add items to cart',
-      feature2: 'Search feature for items',
-      feature3: 'Cart page allow user to adjust quantity and update total costs',
+      title: "An online store",
+      feature1: "User can add items to cart",
+      feature2: "Search feature for items",
+      feature3:
+        "Cart page allow user to adjust quantity and update total costs",
       feature4: `Each item has its own preview page`,
-      url: 'https://longmann94.github.io/shopping-cart/',
-      repoUrl: 'https://github.com/Longmann94/shopping-cart',
-      imgUrl: './images/onlineStore.png'
-    }
+      url: "https://longmann94.github.io/shopping-cart/",
+      repoUrl: "https://github.com/Longmann94/shopping-cart",
+      imgUrl: "./images/onlineStore.png",
+    },
+    {
+      title: "Some of the stuff I did for Stelle",
+      feature1: "Responsive Components",
+      feature2: "Collaboration with backend developer",
+      feature3:
+        "Looks great on any device",
+      feature4: `Animations to keep users engaged`,
+      url: "https://www.stelle.au/app/longtest/home.php",
+      repoUrl: "n/a",
+      imgUrl: "./images/stelle_webpage.png",
+    },
   ]);
 
   const [[showcase, direction], setShowcase] = useState([0, 0]);
